@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Cursos Online - Login</title>
+    <style>
+        /* CSS restaurado */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #0d1d36;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: #0d1d36;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            width: 90%;
+            max-width: 1000px;
+            padding: 2rem;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .left-side {
+            flex: 1;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .right-side {
+            flex: 1;
+            padding: 2rem;
+            border-left: 1px solid #2a4270;
+            background: #0d1d36;
+            border-radius: 0 20px 20px 0;
+            color: white;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo svg {
+            width: 120px;
+            height: auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #2a4270;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.2s;
+            color: white;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .login-btn:hover {
+            background: #5a67d8;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+        }
+
+        .forgot-password a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .register-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .welcome-text {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .welcome-description {
+            color: #ffffff;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .courses {
+            margin-top: 2rem;
+        }
+
+        .courses h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .course-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .course-tag {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .right-side {
+                border-left: none;
+                border-top: 1px solid #2a4270;
+                border-radius: 0 0 20px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h1 class="welcome-text">Bem-vindo de Volta!</h1>
+            <p class="welcome-description">
+                Continue sua jornada de aprendizado em nossa plataforma.
+                Acesse os melhores cursos em tecnologia!
+            </p>
+            <div class="courses">
+                <h3>Cursos Disponíveis</h3>
+                <div class="course-tags">
+                    <span class="course-tag">Programação</span>
+                    <span class="course-tag">Front-end</span>
+                    <span class="course-tag">Data Science</span>
+                    <span class="course-tag">IA</span>
+                    <span class="course-tag">DevOps</span>
+                    <span class="course-tag">UX/UI</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <div class="logo">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" stroke="#667eea" stroke-width="2"/>
+                    <path d="M30 50L45 65L70 35" stroke="#667eea" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h2 style="text-align: center; margin-bottom: 2rem;">Acesse sua Conta</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="Seu e-mail">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha">
+                </div>
+                <div class="forgot-password">
+                    <a href="recuperar.html">Esqueci minha senha</a>
+                </div>
+                <button type="submit" class="login-btn">Entrar</button>
+                <div class="register-link">
+                    Ainda não tem uma conta? 
+                    <a href="index.html">Cadastre-se gratuitamente</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyD2I1j-tEHNX8692BVMnTahFlzQZ9sKJHM",
+            authDomain: "kaapyacademy.firebaseapp.com",
+            projectId: "kaapyacademy",
+            storageBucket: "kaapyacademy.firebasestorage.app",
+            messagingSenderId: "598458944673",
+            appId: "1:598458944673:web:f67dc2396629f322abf4e0"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (!email || !password) {
+                alert('Por favor, preencha todos os campos!');
+                return;
+            }
+
+            try {
+                const userCredential = await signInWithEmailAndPassword(auth, email, password);
+                alert('Login com sucesso!');
+                console.log('Usuário logado:', userCredential.user);
+            } catch (error) {
+                console.error('Erro ao fazer login:', error);
+                alert('Usuário ou senha inválidos.');
+            }
+        });
+    </script>
+</body>
+</html>
